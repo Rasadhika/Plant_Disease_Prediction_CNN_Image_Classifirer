@@ -18,13 +18,14 @@ This project trains an image classifier to recognize plant diseases from leaf ph
 
 A simple CNN built with tf.keras.Sequential:
 
-|Layer| | Details|
-|Conv2D|32 filters, 3x3, ReLU|
-|MaxPooling2D| 2x2|
-|Conv2D|64 filters, 3x3, ReLU|
-|MaxPooling2D| 2x2|
-|Flatten—Dense |256 units, ReLU|
-|Dense (output)|38 units, Softmax|
+| Layer |  Details|
+|------ | ------  |
+| Conv2D | 32 filters, 3x3, ReLU |
+| MaxPooling2D | 2x2 |
+| Conv2D | 64 filters, 3x3, ReLU |
+| MaxPooling2D | 2x2 |
+| Flatten—Dense | 256 units, ReLU |
+| Dense (output) | 38 units, Softmax |
 
 
 **Input size:** 224 x 224 x 3
@@ -41,7 +42,7 @@ Metric Value
 Training accuracy ~98.2%
 Validation accuracy ~88.4%
 
-*Known Limitation:* Overfitting
+### *Known Limitation:* Overfitting
 
 There's a noticeable gap between training accuracy (~98%) and validation accuracy (~88%), which indicates the model is overfitting to the training data rather than learning fully generalizable features. This is a known issue with the current version and is the next thing planned to be addressed, likely through some combination of:
 
